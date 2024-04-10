@@ -1,4 +1,4 @@
-import Img from "assets/icon/logo.png";
+import Img from "assets/brand/logo.png";
 import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -64,34 +64,45 @@ function Login() {
   };
 
   return (
-    <div className="login-container">
-      <div className="background">
-        <div className="shape"></div>
-        <div className="shape"></div>
-      </div>
-      <form onSubmit={handleLogin} className="login-form">
-        <div className="login-img">
+    <div className="login-container flex items-center justify-center h-full w-full">
+      <form
+        onSubmit={handleLogin}
+        className="login-form bg-gray-800/60 px-10 pb-10 pt-6 w-full mx-6  lg:w-1/2 flex items-center justify-center flex-col shadow-lg shadow-gray-950"
+      >
+        <div className="login-img mb-6">
           <Link to="/">
-            <img alt="logo" src={Img} />
+            <img className="h-40" alt="logo" src={Img} />
           </Link>
+          <h3 className="text-4xl text-center -mt-6">Login</h3>
         </div>
-        <h3>Login</h3>
 
-        <label className="login-label" htmlFor="username">
-          Email
-        </label>
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col">
+            <label className="login-label" htmlFor="username">
+              Email
+            </label>
+            <input
+              type="text"
+              className="mt-1 block w-full rounded-sm py-1 border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900"
+            />
+          </div>
+          <div className="flex flex-col">
+            <label className="login-label" htmlFor="username">
+              Password
+            </label>
+            <input
+              type="password"
+              className="mt-1 block w-full rounded-sm py-1 border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900"
+            />
+          </div>
 
-        <button type="submit" className="login-btn">
-          Log In
-        </button>
-        {/* <div class="social">
-          <div class="go">
-            <i class="fab fa-google"></i> Google
-          </div>
-          <div class="fb">
-            <i class="fab fa-facebook"></i> Facebook
-          </div>
-        </div> */}
+          <button
+            type="submit"
+            className="login-btn bg-gray-900 rounded py-2 mt-4 hover:cursor-pointer"
+          >
+            Log In
+          </button>
+        </div>
       </form>
     </div>
   );
