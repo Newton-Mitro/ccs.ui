@@ -69,28 +69,45 @@ const AuthLayout = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-900  text-xs">
+    <div className="flex h-screen bg-zinc-900  text-sm">
       {/* Left Sidebar */}
       <div
-        className={`bg-gray-800 text-white w-64 ${
+        className={`bg-zinc-950 text-white border-r border-gray-800 w-64 ${
           isSidebarOpen ? "block" : "hidden"
         }`}
       >
-        <div className="">
-          <div className=" bg-neutral-800 border-r-2 border-neutral-700  border-dashboard">
+        <div className="text-gray-500">
+          <div className=" bg-neutral-900 border-b border-gray-800 h-16">
             <Link to={"/"}>
               <img className="h-16" src={logo} alt="" />
             </Link>
           </div>
           <div className="sidebar">
             {/* [ ]Sidebar Navigation Goes Here.. */}
+            <ul className="flex flex-col">
+              <li className="hover:cursor-pointer hover:text-gray-400 hover:bg-neutral-800 p-2 transition-all duration-300">
+                Home
+              </li>
+              <li className="hover:cursor-pointer hover:text-gray-400 hover:bg-neutral-800 p-2 transition-all duration-300">
+                KYC
+              </li>
+              <li className="hover:cursor-pointer hover:text-gray-400 hover:bg-neutral-800 p-2 transition-all duration-300">
+                Auth
+              </li>
+              <li className="hover:cursor-pointer hover:text-gray-400 hover:bg-neutral-800 p-2 transition-all duration-300">
+                Peoples
+              </li>
+              <li className="hover:cursor-pointer hover:text-gray-400 hover:bg-neutral-800 p-2 transition-all duration-300">
+                Organizations
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
       {/* Content */}
-      <div className="flex-1 flex flex-col overflow-hidden text-gray-300">
-        <header className="bg-neutral-800 h-16 flex items-center justify-between px-4">
+      <div className="flex-1 flex flex-col overflow-hidden text-gray-500">
+        <header className="bg-neutral-900 h-16 flex items-center justify-between px-4 border-b border-gray-800">
           <button onClick={toggleSidebar} className="">
             {isSidebarOpen ? (
               <CgPlayListRemove size="32" />
@@ -102,8 +119,8 @@ const AuthLayout = () => {
           {/* User Profile Dropdown */}
           <div className="flex h-full">
             <NavLink
-              to=""
-              className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:bg-neutral-900 px-2 w-24"
+              to="/auth"
+              className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300 px-2 w-28"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +139,14 @@ const AuthLayout = () => {
 
               <span>Authorization</span>
             </NavLink>
-            <div className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:bg-neutral-900 px-2 w-24">
+            <NavLink
+              to="/kyc"
+              className={({ isActive }) => {
+                return `${
+                  isActive ? "text-gray-400 font-bold" : ""
+                } flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300 px-2 w-28`;
+              }}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -139,8 +163,11 @@ const AuthLayout = () => {
               </svg>
 
               <span>Customer</span>
-            </div>
-            <div className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:bg-neutral-900 px-2 w-24">
+            </NavLink>
+            <NavLink
+              to="/core-banking"
+              className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300 px-2 w-28"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -157,8 +184,11 @@ const AuthLayout = () => {
               </svg>
 
               <span>Core Banking</span>
-            </div>
-            <div className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:bg-neutral-900 px-2 w-24">
+            </NavLink>
+            <NavLink
+              to="/accounting"
+              className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300 px-2 w-28"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -175,11 +205,11 @@ const AuthLayout = () => {
               </svg>
 
               <span>Accounting</span>
-            </div>
+            </NavLink>
             <div className="relative">
               <button
                 onClick={toggleNotificationDropdown}
-                className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:bg-neutral-900 px-2 w-24 focus:outline-none"
+                className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300 px-2 w-28 focus:outline-none"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -203,7 +233,7 @@ const AuthLayout = () => {
 
               {/* Profile Dropdown */}
               {isNotificationDropdownOpen && (
-                <div className="absolute right-0 w-52 bg-neutral-800 border rounded-md shadow-lg">
+                <div className="absolute right-0 mt-1 w-52 bg-neutral-900 border border-gray-800 rounded-md shadow-lg">
                   {/* Add profile dropdown content */}
                   <Link to="#" className="block px-4 py-2">
                     Profile
@@ -212,7 +242,7 @@ const AuthLayout = () => {
                     Settings
                   </Link>
 
-                  <hr className="border-t mx-2 my-1" />
+                  <hr className="border-t border-gray-800 mx-2 my-1" />
 
                   <button
                     onClick={logOut}
@@ -227,7 +257,7 @@ const AuthLayout = () => {
               <button
                 ref={userRef}
                 onClick={toggleProfileDropdown}
-                className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:bg-neutral-900 px-2 w-24 focus:outline-none"
+                className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300 px-2 w-28 focus:outline-none"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -249,7 +279,7 @@ const AuthLayout = () => {
 
               {/* Profile Dropdown */}
               {isProfileDropdownOpen && (
-                <div className="absolute right-0 w-52 bg-neutral-800 border rounded-md shadow-lg">
+                <div className="absolute right-0 mt-1 w-52 bg-neutral-900 border border-gray-800 rounded-md shadow-lg">
                   {/* Add profile dropdown content */}
                   <Link to="#" className="block px-4 py-2">
                     Profile
@@ -258,7 +288,7 @@ const AuthLayout = () => {
                     Settings
                   </Link>
 
-                  <hr className="border-t mx-2 my-1" />
+                  <hr className="border-t border-gray-800 mx-2 my-1" />
 
                   <button
                     onClick={logOut}
