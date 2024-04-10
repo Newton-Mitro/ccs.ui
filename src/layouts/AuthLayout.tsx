@@ -1,7 +1,36 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CgPlayListAdd, CgPlayListRemove } from "react-icons/cg";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import logo from "../assets/brand/logo_w.png";
+
+function useOuterClick(callback: any) {
+  const innerRef: any = useRef();
+  const callbackRef: any = useRef();
+
+  // set current callback in ref, before second useEffect uses it
+  useEffect(() => {
+    // useEffect wrapper to be safe for concurrent mode
+    callbackRef.current = callback;
+  });
+
+  useEffect(() => {
+    document.addEventListener("click", handleClick);
+    return () => document.removeEventListener("click", handleClick);
+
+    // read most recent callback and innerRef dom node from refs
+    function handleClick(e: any) {
+      if (
+        innerRef.current &&
+        callbackRef.current &&
+        !innerRef.current.contains(e.target)
+      ) {
+        callbackRef.current(e);
+      }
+    }
+  }, []); // no need for callback + innerRef dep
+
+  return innerRef; // return ref; client can omit `useRef`
+}
 
 const AuthLayout = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -9,6 +38,16 @@ const AuthLayout = () => {
   const [isNotificationDropdownOpen, setNotificationDropdownOpen] =
     useState(false);
   const navigate = useNavigate();
+
+  const userRef = useOuterClick((e: any) => {
+    setNotificationDropdownOpen(false);
+    setProfileDropdownOpen(false);
+  });
+
+  // const notificationRef = useOuterClick((e: any) => {
+  //   setNotificationDropdownOpen(false);
+  //   setProfileDropdownOpen(false);
+  // });
 
   const logOut = () => {
     localStorage.removeItem("accessToken");
@@ -186,6 +225,7 @@ const AuthLayout = () => {
             </div>
             <div className="relative">
               <button
+                ref={userRef}
                 onClick={toggleProfileDropdown}
                 className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:bg-neutral-900 px-2 w-24 focus:outline-none"
               >
