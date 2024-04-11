@@ -84,7 +84,7 @@ function Login() {
             </label>
             <input
               type="text"
-              className="mt-1 block w-full rounded-sm py-1 border-zinc-800 bg-zinc-800 shadow-sm focus:border-gray-800 focus:ring focus:ring-gray-800 focus:ring-opacity-50 text-gray-300"
+              className="mt-1 block w-full rounded-sm py-1 border-gray-800 bg-transparent shadow-sm focus:border-gray-800 focus:ring focus:ring-gray-800 focus:ring-opacity-50 text-gray-300"
             />
           </div>
           <div className="flex flex-col">
@@ -93,7 +93,7 @@ function Login() {
             </label>
             <input
               type="password"
-              className="mt-1 block w-full rounded-sm py-1 border-zinc-800 bg-zinc-800 shadow-sm focus:border-gray-800 focus:ring focus:ring-gray-800 focus:ring-opacity-50 text-gray-300"
+              className="mt-1 block w-full rounded-sm py-1 border-gray-800 bg-transparent shadow-sm focus:border-gray-800 focus:ring focus:ring-gray-800 focus:ring-opacity-50 text-gray-300"
             />
           </div>
 
