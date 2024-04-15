@@ -7,15 +7,15 @@ function HomePage() {
       <h2 className="text-xl">Peoples</h2>
       <div className="h-[calc(100vh-132px)] border border-gray-800 bg-zinc-950 p-2 flex flex-col overflow-auto">
         <div className="">
-          <div className="flex items-center my-2 justify-between">
+          <div className="flex items-center my-2 gap-2 justify-between">
             <button
               type="submit"
-              className="bg-gray-800 hover:bg-gray-900 border border-gray-700 hover:shadow-md transition-all duration-300 shadow-sm rounded py-2 px-4 hover:cursor-pointer"
+              className="flex-0 bg-gray-800 hover:bg-gray-900 border border-gray-700 hover:shadow-md transition-all duration-300 shadow-sm rounded py-2 px-4 hover:cursor-pointer"
             >
               Create Person
             </button>
-            <div className="flex gap-2 items-center">
-              <label className="login-label" htmlFor="username">
+            <div className="flex gap-2 items-center w-40 justify-end">
+              <label className="login-label hidden md:block" htmlFor="username">
                 Search
               </label>
               <input
@@ -95,7 +95,7 @@ function HomePage() {
                 </tr>
               </thead>
 
-              <tbody className="flex-1 sm:flex-none ">
+              <tbody className="flex-1 md:flex-none space-y-6">
                 <TableRow />
                 <TableRow />
                 <TableRow />
