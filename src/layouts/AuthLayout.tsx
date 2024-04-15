@@ -39,7 +39,7 @@ const AuthLayout = () => {
   };
 
   return (
-    <div className="flex h-screen bg-zinc-900 text-xs lg:text-sm text-gray-500">
+    <div className="flex h-screen bg-zinc-900 text-xs lg:text-sm text-gray-400 overflow-auto">
       {/* Left Sidebar */}
       <div
         className={`bg-zinc-950  border-r border-gray-800 w-64 ${
