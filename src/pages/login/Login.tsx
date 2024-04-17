@@ -70,11 +70,11 @@ function Login() {
         onSubmit={handleLogin}
         className="login-form bg-zinc-900 px-10 pb-10 pt-6 w-full mx-6  lg:w-1/2 flex items-center justify-center flex-col border border-gray-800"
       >
-        <div className="login-img mb-6">
+        <div className="flex items-center flex-col mb-6 gap-2 ">
           <Link to="/">
-            <img className="h-40" alt="logo" src={Img} />
+            <img className="h-32 bg-white rounded-full" alt="logo" src={Img} />
           </Link>
-          <h3 className="text-4xl text-center -mt-6">Login</h3>
+          <h3 className="text-2xl text-center">CCU CFS Login</h3>
         </div>
 
         <div className="flex flex-col gap-4 w-full md:w-4/6">

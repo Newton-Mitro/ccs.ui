@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CgPlayListAdd, CgPlayListRemove } from "react-icons/cg";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
-import logo from "../assets/brand/logo_w.png";
+import logo from "../assets/brand/logo.png";
 import useOuterClick from "../hooks/useOuterClick";
 
 const AuthLayout = () => {
@@ -47,11 +47,14 @@ const AuthLayout = () => {
         }`}
       >
         <div className="">
-          <div className=" bg-neutral-900 border-b border-gray-800 h-16 flex items-center gap-2">
-            <Link to={"/home"}>
-              <img className="h-12" src={logo} alt="" />
+          <div className="">
+            <Link
+              to={"/home"}
+              className="flex items-center gap-2 bg-neutral-900 border-b border-gray-800 h-16  px-2"
+            >
+              <img className="h-12 bg-white rounded-full" src={logo} alt="" />
+              <h1 className="font-bold text-xl">CCU CFS</h1>
             </Link>
-            <h1 className="font-bold text-xl">Credit Union</h1>
           </div>
           <div className="sidebar">
             {/* [ ]Sidebar Navigation Goes Here.. */}
