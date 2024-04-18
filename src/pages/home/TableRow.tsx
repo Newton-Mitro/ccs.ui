@@ -54,7 +54,7 @@ function TableRow() {
       <td className="border border-gray-800 px-2">
         <label className="md:hidden">Actions</label>
         <div className="flex gap-1">
-          <button className="rounded hover:bg-slate-800 p-1">
+          <button className="rounded hover:text-gray-100 hover:scale-110 p-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -75,7 +75,7 @@ function TableRow() {
               />
             </svg>
           </button>
-          <button className="rounded hover:bg-slate-800 p-1">
+          <button className="rounded hover:text-gray-100 hover:scale-110 p-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -91,7 +91,7 @@ function TableRow() {
               />
             </svg>
           </button>
-          <button className="rounded hover:bg-slate-800 p-1">
+          <button className="rounded hover:text-gray-100 hover:scale-110 p-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
