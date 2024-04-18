@@ -27,8 +27,29 @@ function TableRow() {
         <p className="font-semibold md:font-normal">0170454235747</p>
       </td>
       <td className="border border-gray-800 px-2">
-        <label className="md:hidden">Phone Number</label>
-        <p className="font-semibold md:font-normal">+99-5315644</p>
+        <label className="md:hidden">Status</label>
+
+        <div className="flex flex-wrap">
+          <span className="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+            Dark
+          </span>
+          <span className="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">
+            Red
+          </span>
+          <span className="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+            Green
+          </span>
+          <span className="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">
+            Yellow
+          </span>
+          <div className="flex gap-2 items-center">
+            <label className="relative inline-flex cursor-pointer items-center">
+              <input id="switch-2" type="checkbox" className="peer sr-only" />
+              <div className="peer h-4 w-11 rounded-full border border-gray-700 after:absolute after:-top-1 after:left-0 after:h-6 after:w-6 after:rounded-full after:border after:border-gray-600 after:bg-sky-600 after:transition-all after:content-[''] peer-checked:bg-sky-800 peer-checked:after:translate-x-full peer-focus:ring-green-950"></div>
+            </label>
+            <span>Active</span>
+          </div>
+        </div>
       </td>
       <td className="border border-gray-800 px-2">
         <label className="md:hidden">Actions</label>
