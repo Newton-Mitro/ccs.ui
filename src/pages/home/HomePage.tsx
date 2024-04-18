@@ -91,11 +91,22 @@ function HomePage() {
                     <div className="my-2">
                       <label htmlFor="" className="flex gap-4 flex-wrap">
                         <div className="flex items-center gap-2">
-                          <input id="pin" name="pin" checked type="checkbox" />
+                          <input
+                            id="pin"
+                            name="pin"
+                            checked
+                            type="checkbox"
+                            className="border border-gray-500 bg-gray-700  checked:bg-sky-800 checked:after:translate-x-full focus:ring-green-950"
+                          />
                           <p>Identification Number</p>
                         </div>
                         <div className="flex items-center gap-2">
-                          <input id="name" name="name" type="checkbox" />
+                          <input
+                            id="name"
+                            name="name"
+                            type="checkbox"
+                            className="border border-gray-500 bg-gray-700  checked:bg-sky-800 checked:after:translate-x-full focus:ring-green-950"
+                          />
                           <p>Name</p>
                         </div>
                         <div className="flex items-center gap-2">
@@ -103,6 +114,7 @@ function HomePage() {
                             id="mobile_number"
                             name="mobile_number"
                             type="checkbox"
+                            className="border border-gray-500 bg-gray-700  checked:bg-sky-800 checked:after:translate-x-full focus:ring-green-950"
                           />
                           <p>Mobile Number</p>
                         </div>
@@ -113,11 +125,21 @@ function HomePage() {
                     <div className="my-2">
                       <label htmlFor="" className="flex gap-4 flex-wrap">
                         <div className="flex items-center gap-2">
-                          <input id="pin" name="order_by" type="radio" />
+                          <input
+                            id="pin"
+                            name="order_by"
+                            type="radio"
+                            className="border border-gray-500 bg-gray-700  checked:bg-sky-800 checked:after:translate-x-full focus:ring-green-950"
+                          />
                           <p>Identification Number</p>
                         </div>
                         <div className="flex items-center gap-2">
-                          <input id="name" name="order_by" type="radio" />
+                          <input
+                            id="name"
+                            name="order_by"
+                            type="radio"
+                            className="border border-gray-500 bg-gray-700  checked:bg-sky-800 checked:after:translate-x-full focus:ring-green-950"
+                          />
                           <p>Name</p>
                         </div>
                         <div className="flex items-center gap-2">
@@ -125,6 +147,7 @@ function HomePage() {
                             id="mobile_number"
                             name="order_by"
                             type="radio"
+                            className="border border-gray-500 bg-gray-700  checked:bg-sky-800 checked:after:translate-x-full focus:ring-green-950"
                           />
                           <p>Mobile Number</p>
                         </div>
