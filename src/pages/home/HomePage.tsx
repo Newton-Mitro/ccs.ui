@@ -83,12 +83,13 @@ function HomePage() {
               {isAdvanceSearchOpen && (
                 <div className="rounded absolute top-10 right-0 bg-gray-800 border border-gray-700 w-[calc(100vw-32px)] md:w-[394px] z-10 px-3 pt-2 pb-4">
                   <div className="">
-                    <div className="text-center font-bold py-2">
+                    <div className="text-center font-bold mb-2">
                       Search Options
                     </div>
-                    <div className="">Search Fields</div>
-                    <div className="py-2">
-                      <label htmlFor="" className="flex gap-3">
+                    <div className="font-bold">Search Fields</div>
+                    <hr className="border-gray-700 mt-2" />
+                    <div className="my-2">
+                      <label htmlFor="" className="flex gap-4 flex-wrap">
                         <div className="flex items-center gap-2">
                           <input id="pin" name="pin" checked type="checkbox" />
                           <p>Identification Number</p>
@@ -98,14 +99,19 @@ function HomePage() {
                           <p>Name</p>
                         </div>
                         <div className="flex items-center gap-2">
-                          <input id="gender" name="gender" type="checkbox" />
-                          <p>Gender</p>
+                          <input
+                            id="mobile_number"
+                            name="mobile_number"
+                            type="checkbox"
+                          />
+                          <p>Mobile Number</p>
                         </div>
                       </label>
                     </div>
-                    <div className="">Order By</div>
-                    <div className="py-2">
-                      <label htmlFor="" className="flex gap-3">
+                    <div className="font-bold">Order By</div>
+                    <hr className="border-gray-700 mt-2" />
+                    <div className="my-2">
+                      <label htmlFor="" className="flex gap-4 flex-wrap">
                         <div className="flex items-center gap-2">
                           <input id="pin" name="order_by" type="radio" />
                           <p>Identification Number</p>
@@ -115,13 +121,18 @@ function HomePage() {
                           <p>Name</p>
                         </div>
                         <div className="flex items-center gap-2">
-                          <input id="gender" name="order_by" type="radio" />
-                          <p>Gender</p>
+                          <input
+                            id="mobile_number"
+                            name="order_by"
+                            type="radio"
+                          />
+                          <p>Mobile Number</p>
                         </div>
                       </label>
                     </div>
-                    <div className="py-2">Sort By</div>
-                    <div className="flex gap-2 items-center">
+                    <div className="font-bold">Sort By</div>
+                    <hr className="border-gray-700 mt-2" />
+                    <div className="flex gap-2 items-center mt-2 mb-4">
                       ASC
                       <label className="relative inline-flex cursor-pointer items-center">
                         <input
