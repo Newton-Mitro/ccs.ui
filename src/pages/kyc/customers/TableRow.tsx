@@ -42,13 +42,6 @@ function TableRow() {
           <span className="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">
             Yellow
           </span>
-          <div className="flex gap-2 items-center">
-            <label className="relative inline-flex cursor-pointer items-center">
-              <input id="switch-2" type="checkbox" className="peer sr-only" />
-              <div className="peer h-4 w-11 rounded-full border border-gray-700 after:absolute after:-top-1 after:left-0 after:h-6 after:w-6 after:rounded-full after:border after:border-gray-600 after:bg-sky-600 after:transition-all after:content-[''] peer-checked:bg-sky-800 peer-checked:after:translate-x-full peer-focus:ring-green-950"></div>
-            </label>
-            <span>Active</span>
-          </div>
         </div>
       </td>
       <td className="border border-gray-800 px-2">
