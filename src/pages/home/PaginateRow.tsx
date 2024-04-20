@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function PaginateRow() {
   return (
     <div className="mt-auto flex justify-between items-center">
-      <div className="text-center">
+      <div className="flex items-center gap-2">
         <select
           className="py-0.5 bg-transparent border border-gray-800 shadow-sm focus:border-gray-700 focus:ring focus:ring-gray-700 focus:ring-opacity-50"
           name=""
@@ -25,6 +25,7 @@ function PaginateRow() {
             1000
           </option>
         </select>
+        <div className="">showing 1 to 10 out of 100</div>
       </div>
       <nav
         className="flex flex-row flex-nowrap justify-between md:justify-center items-center"

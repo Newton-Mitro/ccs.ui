@@ -14,12 +14,26 @@ function HomePage() {
       <h2 className="text-xl">Peoples</h2>
       <div className="h-[calc(100vh-132px)] border border-gray-800 bg-zinc-950 p-2 flex flex-col overflow-auto">
         <div className="">
-          <div className="flex items-center my-2 gap-2 justify-between">
+          <div className="flex items-center my-1.5 gap-2 justify-between">
             <button
               type="submit"
-              className="bg-gray-800 hover:bg-gray-900 border border-gray-700 hover:shadow-md transition-all duration-300 shadow-sm rounded py-2 px-4 hover:cursor-pointer"
+              className="bg-gray-800 hover:bg-gray-900 border border-gray-700 hover:shadow-md transition-all duration-300 shadow-sm rounded py-1.5 px-4 hover:cursor-pointer"
             >
-              Create Person
+              <span className="md:block hidden">Create Person</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="w-6 h-6 md:hidden block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z"
+                />
+              </svg>
             </button>
             <div className="relative flex gap-10 items-center">
               <div className="flex gap-2 items-center justify-end relative">
@@ -61,7 +75,6 @@ function HomePage() {
                 </button>
               </div>
               <button
-                type="submit"
                 onClick={toggleAdvanceSearchOption}
                 className="flex items-center bg-gray-800 hover:bg-gray-900 border border-gray-700 hover:shadow-md transition-all duration-300 shadow-sm rounded py-1 px-1 hover:cursor-pointer"
               >
@@ -81,7 +94,7 @@ function HomePage() {
                 </svg>
               </button>
               {isAdvanceSearchOpen && (
-                <div className="rounded absolute top-10 right-0 bg-gray-800 border border-gray-700 w-[calc(100vw-32px)] md:w-[394px] z-10 px-3 pt-2 pb-4">
+                <div className="rounded absolute top-10 right-0 bg-gray-800 border border-gray-700 w-[calc(100vw-76px)] md:w-[394px] z-10 px-3 pt-2 pb-4">
                   <div className="">
                     <div className="text-center font-bold mb-2">
                       Search Options
