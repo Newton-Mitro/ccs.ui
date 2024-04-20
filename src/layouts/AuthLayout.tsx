@@ -67,7 +67,10 @@ const AuthLayout = () => {
             <ul
               className={`flex flex-col ${isSidebarOpen ? "" : "items-center"}`}
             >
-              <li className="hover:cursor-pointer hover:text-gray-400 hover:bg-slate-700/50 p-2 transition-all duration-300 flex items-center gap-2">
+              <NavLink
+                to={"/kyc/customers"}
+                className="hover:cursor-pointer hover:text-gray-400 hover:bg-slate-700/50 p-2 transition-all duration-300 flex items-center gap-2"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -85,10 +88,13 @@ const AuthLayout = () => {
                 <span
                   className={`${isSidebarOpen ? "inline-block" : "hidden"}`}
                 >
-                  Home
+                  Customers
                 </span>
-              </li>
-              <li className="hover:cursor-pointer hover:text-gray-400 hover:bg-slate-700/50 p-2 transition-all duration-300 flex items-center gap-2">
+              </NavLink>
+              <NavLink
+                to={"/kyc/peoples"}
+                className="hover:cursor-pointer hover:text-gray-400 hover:bg-slate-700/50 p-2 transition-all duration-300 flex items-center gap-2"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -111,52 +117,13 @@ const AuthLayout = () => {
                 <span
                   className={`${isSidebarOpen ? "inline-block" : "hidden"}`}
                 >
-                  Customers
-                </span>
-              </li>
-              <li className="hover:cursor-pointer hover:text-gray-400 hover:bg-slate-700/50 p-2 transition-all duration-300 flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
-                  />
-                </svg>
-                <span
-                  className={`${isSidebarOpen ? "inline-block" : "hidden"}`}
-                >
-                  Authorization
-                </span>
-              </li>
-              <li className="hover:cursor-pointer hover:text-gray-400 hover:bg-slate-700/50 p-2 transition-all duration-300 flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
-                  />
-                </svg>
-                <span
-                  className={`${isSidebarOpen ? "inline-block" : "hidden"}`}
-                >
                   Peoples
                 </span>
-              </li>
-              <li className="hover:cursor-pointer hover:text-gray-400 hover:bg-slate-700/50 p-2 transition-all duration-300 flex items-center gap-2">
+              </NavLink>
+              <NavLink
+                to={"organizations"}
+                className="hover:cursor-pointer hover:text-gray-400 hover:bg-slate-700/50 p-2 transition-all duration-300 flex items-center gap-2"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -176,7 +143,7 @@ const AuthLayout = () => {
                 >
                   Organizations
                 </span>
-              </li>
+              </NavLink>
             </ul>
           </div>
         </div>
@@ -196,8 +163,37 @@ const AuthLayout = () => {
           {/* User Profile Dropdown */}
           <div className="flex h-full">
             <NavLink
+              to="/home"
+              className={({ isActive }) => {
+                return `${
+                  isActive ? "text-gray-300 font-bold" : ""
+                } flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300w-10 lg:w-24 w-10 hover:text-yellow-100`;
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                />
+              </svg>
+
+              <span className="hidden lg:inline-block">Home</span>
+            </NavLink>
+            <NavLink
               to="/auth"
-              className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300 px-2 w-10 lg:w-28"
+              className={({ isActive }) => {
+                return `${
+                  isActive ? "text-gray-300 font-bold" : ""
+                } flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300w-10 lg:w-24 w-10 hover:text-yellow-100`;
+              }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -217,11 +213,11 @@ const AuthLayout = () => {
               <span className="hidden lg:inline-block">Authorization</span>
             </NavLink>
             <NavLink
-              to="/kyc"
+              to="/kyc/customers"
               className={({ isActive }) => {
                 return `${
                   isActive ? "text-gray-300 font-bold" : ""
-                } flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300 px-2 w-10 lg:w-28`;
+                } flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300w-10 lg:w-24 w-10 hover:text-yellow-100`;
               }}
             >
               <svg
@@ -243,7 +239,11 @@ const AuthLayout = () => {
             </NavLink>
             <NavLink
               to="/core-banking"
-              className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300 px-2 w-10 lg:w-28"
+              className={({ isActive }) => {
+                return `${
+                  isActive ? "text-gray-300 font-bold" : ""
+                } flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300w-10 lg:w-24 w-10 hover:text-yellow-100`;
+              }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -264,7 +264,11 @@ const AuthLayout = () => {
             </NavLink>
             <NavLink
               to="/accounting"
-              className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300 px-2 w-10 lg:w-28"
+              className={({ isActive }) => {
+                return `${
+                  isActive ? "text-gray-300 font-bold" : ""
+                } flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300w-10 lg:w-24 w-10 hover:text-yellow-100`;
+              }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -288,7 +292,7 @@ const AuthLayout = () => {
                 ref={notificationRef}
                 name="notifications"
                 onClick={toggleNotificationDropdown}
-                className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300 px-2 w-10 lg:w-28 focus:outline-none"
+                className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300w-10 lg:w-24 w-10 hover:text-yellow-100 focus:outline-none"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -335,7 +339,7 @@ const AuthLayout = () => {
                 ref={userRef}
                 name="profile"
                 onClick={toggleProfileDropdown}
-                className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300 px-2 w-10 lg:w-28 focus:outline-none"
+                className="flex flex-col items-center justify-center h-full hover:cursor-pointer hover:text-gray-300w-10 lg:w-24 w-10 hover:text-yellow-100 focus:outline-none"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
