@@ -12,13 +12,10 @@ function CustomersPage() {
   return (
     <div className="w-full space-y-2">
       <h2 className="text-xl">Customers</h2>
-      <div className="h-[calc(100vh-132px)] border border-gray-800 bg-zinc-950 p-2 flex flex-col overflow-auto">
-        <div className="">
-          <div className="flex items-center my-1.5 gap-2 justify-between">
-            <button
-              type="submit"
-              className="bg-gray-800 hover:bg-gray-900 border border-gray-700 hover:shadow-md transition-all duration-300 shadow-sm rounded py-1.5 px-4 hover:cursor-pointer"
-            >
+      <div className="h-[calc(100vh-122px)] border border-gray-800 bg-zinc-950 p-2 flex flex-col overflow-auto">
+        <div className="flex-1">
+          <div className="flex gap-2">
+            <button className="bg-gray-800 hover:bg-gray-900 border border-gray-700 hover:shadow-md transition-all duration-300 shadow-sm rounded py-1.5 px-1.5 md:px-4 hover:cursor-pointer">
               <span className="md:block hidden">Create Person</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -35,11 +32,49 @@ function CustomersPage() {
                 />
               </svg>
             </button>
+            <div className="flex gap-2">
+              <button className="bg-gray-800 hover:bg-gray-900 border border-gray-700 hover:shadow-md transition-all duration-300 shadow-sm rounded py-1.5 px-1.5 md:px-4 hover:cursor-pointer">
+                <span className="md:block hidden">Export Excel</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6 block md:hidden"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 0 1 9 9v.375M10.125 2.25A3.375 3.375 0 0 1 13.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 0 1 3.375 3.375M9 15l2.25 2.25L15 12"
+                  />
+                </svg>
+              </button>
+              <button className="bg-gray-800 hover:bg-gray-900 border border-gray-700 hover:shadow-md transition-all duration-300 shadow-sm rounded py-1.5 px-1.5 md:px-4 hover:cursor-pointer">
+                <span className="md:block hidden">Export PDF</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6 block md:hidden"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 0 1 9 9v.375M10.125 2.25A3.375 3.375 0 0 1 13.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 0 1 3.375 3.375M9 15l2.25 2.25L15 12"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div className="flex items-center my-1.5 gap-2 justify-end">
             <div className="relative flex gap-10 items-center">
               <div className="flex gap-2 items-center justify-end relative">
                 <input
                   type="text"
-                  className="mt-1 w-48 md:w-80 rounded-sm py-1 border-gray-700 bg-transparent shadow-sm focus:border-gray-800 focus:ring focus:ring-gray-800 focus:ring-opacity-50 text-gray-300"
+                  className="mt-1 w-full md:w-80 rounded-sm py-1 border-gray-700 bg-transparent shadow-sm focus:border-gray-800 focus:ring focus:ring-gray-800 focus:ring-opacity-50 text-gray-300"
                 />
                 <button className="absolute top-1 border border-slate-700 hover:bg-slate-800 rounded-r -right-8 bg-slate-700 p-1">
                   <svg
@@ -186,7 +221,7 @@ function CustomersPage() {
                     <button
                       type="submit"
                       onClick={toggleAdvanceSearchOption}
-                      className="flex-0 bg-gray-800 hover:bg-gray-900 border border-gray-700 hover:shadow-md transition-all duration-300 shadow-sm rounded py-1.5 px-4 hover:cursor-pointer"
+                      className="flex-0 bg-gray-800 hover:bg-gray-900 border border-gray-700 hover:shadow-md transition-all duration-300 shadow-sm rounded py-1.5 px-1.5 md:px-4 hover:cursor-pointer"
                     >
                       Search
                     </button>
@@ -195,7 +230,7 @@ function CustomersPage() {
               )}
             </div>
           </div>
-          <div className="h-[calc(100vh-244px)] overflow-auto border border-b border-gray-800">
+          <div className="h-[calc(100vh-268px)] md:h-[calc(100vh-264px)] overflow-auto border border-b border-gray-800">
             <table className="whitespace-no-wrap relative w-full table-auto border-collapse border">
               <thead className="w-full">
                 <tr className="sticky -top-1 h-10 hidden w-full shadow-sm md:table-row bg-gray-800">

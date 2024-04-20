@@ -69,7 +69,11 @@ const AuthLayout = () => {
             >
               <NavLink
                 to={"/kyc/customers"}
-                className="hover:cursor-pointer hover:text-gray-400 hover:bg-slate-700/50 p-2 transition-all duration-300 flex items-center gap-2"
+                className={({ isActive }) => {
+                  return `${
+                    isActive ? "text-yellow-100 font-bold bg-cyan-950/50" : ""
+                  } hover:cursor-pointer hover:bg-slate-700/50 p-2 transition-all duration-300 flex items-center gap-2`;
+                }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +97,11 @@ const AuthLayout = () => {
               </NavLink>
               <NavLink
                 to={"/kyc/peoples"}
-                className="hover:cursor-pointer hover:text-gray-400 hover:bg-slate-700/50 p-2 transition-all duration-300 flex items-center gap-2"
+                className={({ isActive }) => {
+                  return `${
+                    isActive ? "text-yellow-100 font-bold bg-cyan-950/50" : ""
+                  } hover:cursor-pointer hover:bg-slate-700/50 p-2 transition-all duration-300 flex items-center gap-2`;
+                }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +130,11 @@ const AuthLayout = () => {
               </NavLink>
               <NavLink
                 to={"organizations"}
-                className="hover:cursor-pointer hover:text-gray-400 hover:bg-slate-700/50 p-2 transition-all duration-300 flex items-center gap-2"
+                className={({ isActive }) => {
+                  return `${
+                    isActive ? "text-yellow-100 font-bold bg-cyan-950/50" : ""
+                  } hover:cursor-pointer hover:bg-slate-700/50 p-2 transition-all duration-300 flex items-center gap-2`;
+                }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
