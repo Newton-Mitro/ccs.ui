@@ -2,11 +2,11 @@ import CollectionEntryItem from "./CollectionEntryItem";
 
 function CollectionEntry() {
   return (
-    <div className="flex flex-col h-full gap-2">
+    <div className="flex flex-col h-full">
       <header className="text-center font-bold p-4 bg-gray-800/70 border-b border-gray-800">
         Collection Entry
       </header>
-      <div className="flex gap-2 flex-col mx-2 h-[calc(100vh-262px)] overflow-auto">
+      <div className="flex gap-2 flex-col h-[calc(100vh-228px)] overflow-auto p-2">
         <CollectionEntryItem />
         <CollectionEntryItem />
         <CollectionEntryItem />
@@ -25,7 +25,7 @@ function CollectionEntry() {
         <CollectionEntryItem />
         <CollectionEntryItem />
       </div>
-      <footer className="text-center font-bold p-4 bg-gray-800/70 border-b border-gray-800 mt-auto flex justify-between items-center">
+      <footer className="text-center font-bold p-2 bg-gray-800/70 border-b border-gray-800 mt-auto flex justify-between items-center">
         <div className="flex gap-2 justify-center">
           <button className="bg-gray-800 hover:bg-gray-900 border border-gray-700 hover:shadow-md transition-all duration-300 shadow-sm rounded py-1.5 px-1.5 md:px-4 hover:cursor-pointer">
             <span className="md:block hidden">Collect For Later</span>
