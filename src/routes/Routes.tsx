@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../pages/error-page/ErrorPage";
 import HomePage from "../pages/home/HomePage";
 import CustomersPage from "../pages/kyc/customers/CustomersPage";
+import PeoplesPage from "../pages/kyc/peoples/PeoplesPage";
 import Login from "../pages/login/Login";
 import PrivateRoute from "./PrivateRoute";
 
@@ -34,7 +35,7 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { path: "customers", element: <CustomersPage /> },
-      { path: "peoples", element: <div className="">Person</div> },
+      { path: "peoples", element: <PeoplesPage /> },
       { path: "organizations", element: <div className="">Organization</div> },
     ],
   },
