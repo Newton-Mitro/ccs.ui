@@ -4,7 +4,7 @@ function CollectorCollectionsItem({ disabled }: any) {
       <span>Jone Doe (50725)</span>
       <span>500.00 ৳</span>
       <div className="grid grid-cols-2 gap-2 items-center">
-        <span className="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+        <span className="bg-gray-700 text-gray-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded">
           Draft
         </span>
 
