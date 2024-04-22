@@ -6,7 +6,7 @@ function CollectionEntry() {
       <header className="text-center font-bold p-4 bg-gray-800/70 border-b border-gray-800">
         Collection Entry
       </header>
-      <div className="flex gap-2 flex-col h-[calc(100vh-228px)] overflow-auto p-2">
+      <div className="flex gap-1 flex-col h-[calc(100vh-228px)] overflow-auto p-2">
         <CollectionEntryItem />
         <CollectionEntryItem />
         <CollectionEntryItem />

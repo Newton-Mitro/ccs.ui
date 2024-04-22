@@ -68,7 +68,6 @@ function SearchCollectionLedgers({
           {isAdvanceSearchOpen && (
             <div className="rounded absolute top-10 right-0 bg-gray-800 border border-gray-700 w-[calc(100vw-76px)] md:w-[394px] z-10 px-3 pt-2 pb-4">
               <div className="">
-                <div className="text-center font-bold mb-2">Search Options</div>
                 <div className="font-bold">Search Fields</div>
                 <hr className="border-gray-700 mt-2" />
                 <div className="my-2">
@@ -94,12 +93,12 @@ function SearchCollectionLedgers({
                     </div>
                     <div className="flex items-center gap-2">
                       <input
-                        id="name"
-                        name="name"
+                        id="account_name"
+                        name="account_name"
                         type="checkbox"
                         className="border border-gray-500 bg-gray-700  checked:bg-sky-800 checked:after:translate-x-full focus:ring-green-950"
                       />
-                      <p>Name</p>
+                      <p>Account Name</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <input
@@ -125,6 +124,44 @@ function SearchCollectionLedgers({
               </div>
             </div>
           )}
+
+          <div className="hidden rounded font-normal absolute top-10 right-10 bg-gray-800 border border-gray-700 w-[calc(100vw-76px)] md:w-[354px] z-10 divide-y divide-slate-700">
+            <div className="flex gap-2 items-center hover:bg-zinc-800 p-2 hover:cursor-pointer">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYNX4xgcoIqbAJuGPOtZUkeypIh8NQ3qMj4eF71OsOA&s"
+                alt=""
+                className="rounded-full w-10 h-10"
+              />
+              <div className="flex flex-col text-left">
+                <div className="">{`John Doe | Male | 12 June 2007`}</div>
+                <div className="text-xs">{`0000001 | +880-1700000000`}</div>
+              </div>
+            </div>
+
+            <div className="flex gap-2 items-center hover:bg-zinc-800 p-2 hover:cursor-pointer">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYNX4xgcoIqbAJuGPOtZUkeypIh8NQ3qMj4eF71OsOA&s"
+                alt=""
+                className="rounded-full w-10 h-10"
+              />
+              <div className="flex flex-col text-left">
+                <div className="">{`John Doe | Male | 12 June 2007`}</div>
+                <div className="text-xs">{`0000001 | +880-1700000000`}</div>
+              </div>
+            </div>
+
+            <div className="flex gap-2 items-center hover:bg-zinc-800 p-2 hover:cursor-pointer">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYNX4xgcoIqbAJuGPOtZUkeypIh8NQ3qMj4eF71OsOA&s"
+                alt=""
+                className="rounded-full w-10 h-10"
+              />
+              <div className="flex flex-col text-left">
+                <div className="">{`John Doe | Male | 12 June 2007`}</div>
+                <div className="text-xs">{`0000001 | +880-1700000000`}</div>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
       <div className="flex gap-2 flex-col p-2 h-[calc((100vh/2)-174px)] overflow-auto">

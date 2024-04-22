@@ -1,9 +1,9 @@
 function CollectionEntryItem() {
   return (
-    <div className="flex gap-4 items-center justify-end mx-2">
+    <div className="flex gap-4 items-center justify-end">
       <div className="flex w-full justify-end gap-2 items-center border border-gray-800 pl-2 rounded-r bg-sky-950/40">
         <span className="w-1/2">
-          Saving Account - Jone Doe (50725) - Personal
+          {`Saving Account | Jone Doe (50725) | Loan | Personal`}
         </span>
         <div className="w-1/2">
           <input
