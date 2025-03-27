@@ -19,3 +19,56 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #4d1c36;
 }
+
+@layer base {
+  :root {
+    --theme-background: #161616;
+    --theme-on-background: #3f3f3f;
+    --theme-backgroundVariant: #f6fafd;
+    --theme-on-backgroundVariant: #2b2b2b;
+    --theme-primary: #222d67;
+    --theme-primaryVariant: #162742;
+    --theme-on-primary: #f3f3f3;
+    --theme-on-primaryVariant: #f3f3f3;
+    --theme-secondary: #8f407b;
+    --theme-on-secondary: #fdf1ed;
+    --theme-secondary-variant: #2b2b2b;
+    --theme-surface: #ffffff;
+    --theme-on-surface: #3b3b3b;
+    --theme-on-surfaceVariant: #2b2b2b;
+    --theme-error: #b12e06;
+    --theme-on-error: #ffffff;
+    --theme-success: #02692a;
+    --theme-on-success: #ffffff;
+    --theme-on-border: #8a8a8a;
+    --theme-on-disabled: #f3f3f3;
+  }
+
+  * {
+    scroll-behavior: smooth;
+    scrollbar-color: #0a4c95 #c2d2e4;
+    scrollbar-width: 6px;
+  }
+
+  /* Chrome, Edge, and Safari */
+
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--theme-background);
+    border-radius: 1px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--theme-primary);
+    border-radius: 1px;
+    border: 1px solid var(--theme-primary);
+  }
+
+  .text-sideways {
+    writing-mode: tb-rl;
+  }
+}

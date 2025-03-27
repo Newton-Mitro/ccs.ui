@@ -1,8 +1,17 @@
 import { RouterProvider } from "react-router-dom";
-import { router } from "./routes/Routes";
+import { appRoutes } from "./routes/AppRoutes";
+import { useEffect } from "react";
 
 function App() {
-  return <RouterProvider router={router}></RouterProvider>;
+  useEffect(() => {
+    const root = document.documentElement;
+    const themeBackground = getComputedStyle(root)
+      .getPropertyValue("--theme-background")
+      .trim();
+    document.body.style.backgroundColor = themeBackground;
+  }, []);
+
+  return <RouterProvider router={appRoutes}></RouterProvider>;
 }
 
 export default App;

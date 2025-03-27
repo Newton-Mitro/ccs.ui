@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import ErrorPage from "../pages/error-page/ErrorPage";
-import HomePage from "../pages/home/HomePage";
+import ErrorPage from "../pages/ErrorPage";
+import HomePage from "../pages/HomePage";
 import CustomersPage from "../pages/kyc/customers/CustomersPage";
 import PeoplesPage from "../pages/kyc/peoples/PeoplesPage";
 import PrivateRoute from "./PrivateRoute";
@@ -8,7 +8,7 @@ import { Login, Register } from "../modules/auth/AuthModule";
 import AuthLayout from "../layouts/AuthLayout";
 import PublicLayout from "../layouts/PublicLayout";
 
-export const router = createBrowserRouter([
+export const appRoutes = createBrowserRouter([
   {
     path: "/",
     element: <PrivateRoute />,
