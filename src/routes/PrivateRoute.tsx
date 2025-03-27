@@ -1,20 +1,12 @@
-import { Navigate, useLocation } from "react-router-dom";
-import useLoggedInUser from "../hooks/useLoggedInUser";
+import React from "react";
+import { Navigate, Outlet } from "react-router-dom";
+import { useAuth } from "../shared/context/AuthContext";
 
-function PrivateRoute({ children }: any) {
-  const [users, isLoading] = useLoggedInUser();
-  const location = useLocation();
+const PrivateRoute = () => {
+  const { user } = useAuth();
+  console.log("Private Route");
 
-  if (isLoading) {
-    return <div>loading...</div>;
-  }
-
-  // [ ] Need to remove null check
-  if (users === null) {
-    return children;
-  }
-
-  return <Navigate to="/login" state={{ from: location }} replace></Navigate>;
-}
+  return user ? <Outlet /> : <Navigate to="/login" replace />;
+};
 
 export default PrivateRoute;
